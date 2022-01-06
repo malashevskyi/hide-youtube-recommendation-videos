@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Hide youtube recommendation videos",
+  "description": "Hide youtube recommendation videos, on main page and on single page into sidebar",
+  "version": "1.0.0",
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["activeTab", "tabs"],
+  "browser_action": {
+    "default_icon": "icon16.png",
+    "default_title": "Hide youtube recommendation videos"
+  }
+}
