@@ -3,7 +3,7 @@ function addStyle() {
   style.setAttribute('id', 'youtube-change-home-page-style')
 
   const css = /* css */ `
-  #secondary {
+  #related {
     display: none !important;
   }
   #page-manager {
@@ -78,7 +78,6 @@ window.addEventListener('load', () => {})
 
 function frame() {
   if (window.location.href === 'https://www.youtube.com/') {
-    console.log('main page')
     const emoji = document.getElementById('extensionEmoji')
     if (!emoji) {
       addEmoji()
@@ -96,7 +95,6 @@ function frame() {
       emoji.style.display = 'block'
     }
   } else if (window.location.href !== 'https://www.youtube.com/') {
-    console.log('not main page')
     const pageManager = document.getElementById('page-manager')
     const emoji = document.getElementById('extensionEmoji')
 
